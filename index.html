@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Études</title>
+    <title>Portfolio - Sofiia Ukrainska</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Menu fixe à gauche -->
-    <nav class="fixed-menu">
-        <ul>
-            <li><a href="#about">À propos de moi</a></li>
-            <li><a href="#school-projects">Projets de l'école</a></li>
-            <li><a href="#thesis">Recherche de mémoire</a></li>
-        </ul>
-    </nav>
+    <!-- Barre latérale fixe avec le nom et l'icône du menu -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+            <span class="name">Sofiia Ukrainska, M1 2025</span>
+        </div>
+        <!-- Menu déroulant -->
+        <nav class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li><a href="#about">À propos de moi</a></li>
+                <li><a href="#school-projects">Les projets de l'école</a></li>
+                <li><a href="#thesis">Recherche pour le mémoire</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Contenu principal -->
     <div class="main-content">
@@ -22,13 +30,13 @@
         <section id="about" class="container">
             <h2>À propos de moi</h2>
             <p>
-                Je m'appelle Sofia Ukrainska, j'ai 23 ans et je suis étudiante en Master 1 à l'École Nationale Supérieure d'Architecture de Paris-Belleville. Mon approche de l'architecture s'inscrit dans une réflexion sur l'habitat collectif, l'urbanisme participatif et la manière dont l'architecture façonne les modes de vie. Actuellement, je travaille sur mon mémoire consacré au logement participatif, en étudiant notamment Les Jardies à Meudon, un projet emblématique conçu par l'architecte Claude Guislan en 1973.
+                Je m'appelle Sofiia Ukrainska, j'ai 23 ans et je suis étudiante en Master 1 à l'École Nationale Supérieure d'Architecture de Paris-Belleville. Mon approche de l'architecture s'inscrit dans une réflexion sur l'habitat collectif, l'urbanisme participatif et la manière dont l'architecture façonne les modes de vie. Actuellement, je travaille sur mon mémoire consacré au logement participatif, en étudiant notamment Les Jardies à Meudon, un projet emblématique conçu par l'architecte Claude Guislan en 1973.
             </p>
         </section>
 
-        <!-- Section Projets de l'école -->
+        <!-- Section Les projets de l'école -->
         <section id="school-projects" class="container">
-            <h2>Projets de l'école</h2>
+            <h2>Les projets de l'école</h2>
             <p>
                 Voici quelques-uns des projets que j'ai réalisés dans le cadre de mes études :
             </p>
@@ -39,13 +47,33 @@
             </ul>
         </section>
 
-        <!-- Section Recherche de mémoire -->
+        <!-- Section Recherche pour le mémoire -->
         <section id="thesis" class="container">
-            <h2>Recherche de mémoire</h2>
+            <h2>Recherche pour le mémoire</h2>
             <p>
                 Mon mémoire porte sur le logement participatif, en étudiant notamment Les Jardies à Meudon, un projet emblématique conçu par l'architecte Claude Guislan en 1973. À travers mes recherches, je m'interroge sur la place des habitants dans la conception de leur cadre de vie et sur les nouvelles formes d'habitat collaboratif.
             </p>
         </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>
+                Vous pouvez me contacter à l'adresse <a href="mailto:email@example.com">email@example.com</a>.
+            </p>
+        </section>
     </div>
+
+    <!-- JavaScript pour le menu déroulant -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
