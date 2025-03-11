@@ -12,39 +12,42 @@ body {
     color: #333;
 }
 
-/* Barre latérale fixe */
-.sidebar {
+/* Barre horizontale fixe en haut */
+.topbar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Largeur de la barre latérale */
-    height: 100vh; /* Hauteur totale de la page */
+    width: 100%;
     background-color: #f5f5f5; /* Fond gris clair */
-    border-right: 1px solid #ddd; /* Fine ligne verticale */
-    padding: 20px;
+    border-bottom: 1px solid #ddd; /* Fine ligne horizontale */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
 }
 
-.sidebar-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.name {
+.topbar .name {
     font-weight: bold;
     color: #333;
+}
+
+.topbar .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Menu déroulant */
 .dropdown-menu {
     display: none; /* Caché par défaut */
+    position: fixed;
+    top: 50px; /* Positionné juste en dessous de la barre horizontale */
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5; /* Fond gris clair */
+    border-bottom: 1px solid #ddd; /* Fine ligne horizontale */
+    padding: 10px 20px;
+    z-index: 999; /* En dessous de la barre horizontale */
 }
 
 .dropdown-menu ul {
@@ -52,7 +55,7 @@ body {
 }
 
 .dropdown-menu ul li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .dropdown-menu ul li a {
@@ -67,7 +70,7 @@ body {
 
 /* Contenu principal */
 .main-content {
-    margin-left: 270px; /* Espace pour éviter que le contenu ne soit caché sous la barre latérale */
+    margin-top: 70px; /* Espace pour éviter que le contenu ne soit caché sous la barre horizontale */
     padding: 20px;
 }
 
