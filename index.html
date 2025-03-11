@@ -17,7 +17,7 @@
     <nav class="dropdown-menu" id="dropdownMenu">
         <ul>
             <li><a href="#about" onclick="closeMenu()">À propos de moi</a></li>
-            <li><a href="#school-projects" onclick="closeMenu()">Les projets</a></li> <!-- Modification ici -->
+            <li><a href="#school-projects" onclick="closeMenu()">Les projets de l'école</a></li>
             <li><a href="#thesis" onclick="closeMenu()">Recherche pour le mémoire</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
@@ -62,9 +62,9 @@
             </div>
         </section>
 
-        <!-- Section Les projets -->
+        <!-- Section Les projets de l'école -->
         <section id="school-projects" class="container">
-            <h2>Les projets</h2>
+            <h2>Les projets de l'école</h2>
             <p>
                 Voici quelques-uns des projets que j'ai réalisés dans le cadre de mes études :
             </p>
@@ -76,16 +76,6 @@
                 <li>Projet 3 : Description du projet 3.</li>
             </ul>
         </section>
-
-        <!-- Modale pour afficher les détails du projet -->
-        <div id="projectModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2 id="modalTitle"></h2>
-                <div id="modalImages"></div>
-                <p id="modalDescription"></p>
-            </div>
-        </div>
 
         <!-- Section Recherche pour le mémoire -->
         <section id="thesis" class="container">
@@ -110,4 +100,21 @@
         </section>
     </div>
 
-  
+    <!-- JavaScript pour le menu déroulant -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = "none";
+        }
+    </script>
+</body>
+</html>
