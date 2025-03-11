@@ -17,7 +17,7 @@
     <nav class="dropdown-menu" id="dropdownMenu">
         <ul>
             <li><a href="#about" onclick="closeMenu()">À propos de moi</a></li>
-            <li><a href="#school-projects" onclick="closeMenu()">Les projets de l'école</a></li>
+            <li><a href="#school-projects" onclick="closeMenu()">Les projets</a></li> <!-- Modification ici -->
             <li><a href="#thesis" onclick="closeMenu()">Recherche pour le mémoire</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
@@ -62,33 +62,47 @@
             </div>
         </section>
 
-        <!-- Section Les projets de l'école -->
+        <!-- Section Les projets -->
+        <section id="school-projects" class="container">
+            <h2>Les projets</h2>
+            <p>
+                Voici quelques-uns des projets que j'ai réalisés dans le cadre de mes études :
+            </p>
+            <ul>
+                <li>Projet 1 : Description du projet 1.</li>
+                <img src="projet1.jpg" alt="Photo du Projet 1" style="max-width: 100%; height: auto;">
+                <p>Description du projet 1.</p>
+                <li>Projet 2 : Description du projet 2.</li>
+                <li>Projet 3 : Description du projet 3.</li>
+            </ul>
+        </section>
+
         <!-- Section Portfolio -->
         <section id="portfolio" class="container">
-    		<h2>Portfolio</h2>
-    			<div class="portfolio-grid">
-        <!-- Projet 1 -->
-        <div class="portfolio-item">
-            <img src="images/projet1-thumbnail.jpg" alt="Projet 1" onclick="openProject('projet1')">
-            <p>Projet 1</p>
-        </div>
-        <!-- Projet 2 -->
-        <div class="portfolio-item">
-            <img src="images/projet2-thumbnail.jpg" alt="Projet 2" onclick="openProject('projet2')">
-            <p>Projet 2</p>
-        </div>
-    </div>
-</section>
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- Projet 1 -->
+                <div class="portfolio-item">
+                    <img src="images/projet1-thumbnail.jpg" alt="Projet 1" onclick="openProject('projet1')">
+                    <p>Projet 1</p>
+                </div>
+                <!-- Projet 2 -->
+                <div class="portfolio-item">
+                    <img src="images/projet2-thumbnail.jpg" alt="Projet 2" onclick="openProject('projet2')">
+                    <p>Projet 2</p>
+                </div>
+            </div>
+        </section>
 
-<!-- Modale pour afficher les détails du projet -->
-<div id="projectModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <div id="modalImages"></div>
-        <p id="modalDescription"></p>
-    </div>
-</div>
+        <!-- Modale pour afficher les détails du projet -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalImages"></div>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
 
         <!-- Section Recherche pour le mémoire -->
         <section id="thesis" class="container">
@@ -113,8 +127,9 @@
         </section>
     </div>
 
-    <!-- JavaScript pour le menu déroulant -->
+    <!-- JavaScript pour le menu déroulant et les modales -->
     <script>
+        // Fonction pour ouvrir/fermer le menu déroulant
         function toggleMenu() {
             const menu = document.getElementById("dropdownMenu");
             if (menu.style.display === "block") {
@@ -124,10 +139,57 @@
             }
         }
 
+        // Fonction pour fermer le menu déroulant
         function closeMenu() {
             const menu = document.getElementById("dropdownMenu");
             menu.style.display = "none";
         }
+
+        // Fonction pour ouvrir la modale avec les détails du projet
+        function openProject(projectId) {
+            const modal = document.getElementById("projectModal");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalImages = document.getElementById("modalImages");
+            const modalDescription = document.getElementById("modalDescription");
+
+            // Exemple de données pour chaque projet (à adapter avec vos projets)
+            const projects = {
+                projet1: {
+                    title: "Projet 1",
+                    images: ["images/projet1-1.jpg", "images/projet1-2.jpg"],
+                    description: "Description détaillée du Projet 1."
+                },
+                projet2: {
+                    title: "Projet 2",
+                    images: ["images/projet2-1.jpg", "images/projet2-2.jpg"],
+                    description: "Description détaillée du Projet 2."
+                }
+            };
+
+            const project = projects[projectId];
+
+            // Remplir la modale avec les données du projet
+            modalTitle.textContent = project.title;
+            modalDescription.textContent = project.description;
+            modalImages.innerHTML = project.images.map(img => `<img src="${img}" alt="${project.title}">`).join("");
+
+            // Afficher la modale
+            modal.style.display = "block";
+        }
+
+        // Fonction pour fermer la modale
+        function closeModal() {
+            const modal = document.getElementById("projectModal");
+            modal.style.display = "none";
+        }
+
+        // Fermer la modale si on clique en dehors de celle-ci
+        window.onclick = function(event) {
+            const modal = document.getElementById("projectModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
     </script>
 </body>
 </html>
