@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Barre latérale fixe avec le nom et l'icône du menu -->
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <span class="menu-icon" onclick="toggleMenu()">☰</span>
-            <span class="name">Sofiia Ukrainska, M1 2025</span>
-        </div>
-        <!-- Menu déroulant -->
-        <nav class="dropdown-menu" id="dropdownMenu">
-            <ul>
-                <li><a href="#about">À propos de moi</a></li>
-                <li><a href="#school-projects">Les projets de l'école</a></li>
-                <li><a href="#thesis">Recherche pour le mémoire</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Barre horizontale fixe en haut -->
+    <div class="topbar">
+        <span class="name">Sofiia Ukrainska, M1 2025</span>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
     </div>
+
+    <!-- Menu déroulant -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="#about">À propos de moi</a></li>
+            <li><a href="#school-projects">Les projets de l'école</a></li>
+            <li><a href="#thesis">Recherche pour le mémoire</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Contenu principal -->
     <div class="main-content">
