@@ -63,19 +63,32 @@
         </section>
 
         <!-- Section Les projets de l'école -->
-        <section id="school-projects" class="container">
-            <h2>Les projets de l'école</h2>
-            <p>
-                Voici quelques-uns des projets que j'ai réalisés dans le cadre de mes études :
-            </p>
-            <ul>
-                <li>Projet 1 : Description du projet 1.</li>
-                <img src="projet1.jpg" alt="Photo du Projet 1" style="max-width: 100%; height: auto;">
-                <p>Description du projet 1.</p>
-                <li>Projet 2 : Description du projet 2.</li>
-                <li>Projet 3 : Description du projet 3.</li>
-            </ul>
-        </section>
+        <!-- Section Portfolio -->
+        <section id="portfolio" class="container">
+    		<h2>Portfolio</h2>
+    			<div class="portfolio-grid">
+        <!-- Projet 1 -->
+        <div class="portfolio-item">
+            <img src="images/projet1-thumbnail.jpg" alt="Projet 1" onclick="openProject('projet1')">
+            <p>Projet 1</p>
+        </div>
+        <!-- Projet 2 -->
+        <div class="portfolio-item">
+            <img src="images/projet2-thumbnail.jpg" alt="Projet 2" onclick="openProject('projet2')">
+            <p>Projet 2</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modale pour afficher les détails du projet -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalImages"></div>
+        <p id="modalDescription"></p>
+    </div>
+</div>
 
         <!-- Section Recherche pour le mémoire -->
         <section id="thesis" class="container">
