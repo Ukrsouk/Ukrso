@@ -10,16 +10,16 @@
     <!-- Barre horizontale fixe en haut -->
     <div class="topbar">
         <span class="name">Sofiia Ukrainska, M1 2025</span>
-                            <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
     </div>
 
     <!-- Menu déroulant -->
     <nav class="dropdown-menu" id="dropdownMenu">
         <ul>
-            <li><a href="#about">À propos de moi</a></li>
-            <li><a href="#school-projects">Les projets de l'école</a></li>
-            <li><a href="#thesis">Recherche pour le mémoire</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" onclick="closeMenu()">À propos de moi</a></li>
+            <li><a href="#school-projects" onclick="closeMenu()">Les projets de l'école</a></li>
+            <li><a href="#thesis" onclick="closeMenu()">Recherche pour le mémoire</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
     </nav>
 
@@ -33,34 +33,35 @@
             </p>
         </section>
 
-    <!-- Section Skills -->
-<section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skill">
-        <span class="skill-name">AutoCAD</span>
-        <div class="skill-bar">
-            <div class="skill-level" style="width: 80%;">80%</div>
-        </div>
-    </div>
-    <div class="skill">
-        <span class="skill-name">Revit</span>
-        <div class="skill-bar">
-            <div class="skill-level" style="width: 70%;">70%</div>
-        </div>
-    </div>
-    <div class="skill">
-        <span class="skill-name">ArchiCAD</span>
-        <div class="skill-bar">
-            <div class="skill-level" style="width: 50%;">50%</div>
-        </div>
-    </div>
-    <div class="skill">
-        <span class="skill-name">Affinity</span>
-        <div class="skill-bar">
-            <div class="skill-level" style="width: 70%;">70%</div>
-        </div>
-    </div>
-</section>
+        <!-- Section Skills -->
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <div class="skill">
+                <span class="skill-name">AutoCAD</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Revit</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">ArchiCAD</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="skill">
+                <span class="skill-name">Affinity</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Section Les projets de l'école -->
         <section id="school-projects" class="container">
             <h2>Les projets de l'école</h2>
@@ -69,9 +70,8 @@
             </p>
             <ul>
                 <li>Projet 1 : Description du projet 1.</li>
-    <img src="projet1.jpg" alt="Photo du Projet 1" style="max-width: 100%; height: auto;">
-    <p>Description du projet 1.</p>
-</li>
+                <img src="projet1.jpg" alt="Photo du Projet 1" style="max-width: 100%; height: auto;">
+                <p>Description du projet 1.</p>
                 <li>Projet 2 : Description du projet 2.</li>
                 <li>Projet 3 : Description du projet 3.</li>
             </ul>
@@ -86,18 +86,19 @@
         </section>
 
         <!-- Section Contact -->
-<section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>
-        Vous pouvez me contacter à l'adresse <a href="mailto:sofiia.ukr.archi@gmail.com">sofiia.ukr.archi@gmail.com</a>.
-    </p>
-    <p>
-        Téléphone : <a href="tel:0760016161">0760016161</a>
-    </p>
-    <p>
-        E-mail de recherche mémoire: <a href="mailto:ensapbrecherche@gmail.com">ensapbrecherche@gmail.com</a>
-    </p>
-</section>
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>
+                Vous pouvez me contacter à l'adresse <a href="mailto:sofiia.ukr.archi@gmail.com">sofiia.ukr.archi@gmail.com</a>.
+            </p>
+            <p>
+                Téléphone : <a href="tel:0760016161">0760016161</a>
+            </p>
+            <p>
+                E-mail de recherche mémoire: <a href="mailto:ensapbrecherche@gmail.com">ensapbrecherche@gmail.com</a>
+            </p>
+        </section>
+    </div>
 
     <!-- JavaScript pour le menu déroulant -->
     <script>
@@ -108,6 +109,11 @@
             } else {
                 menu.style.display = "block";
             }
+        }
+
+        function closeMenu() {
+            const menu = document.getElementById("dropdownMenu");
+            menu.style.display = "none";
         }
     </script>
 </body>
