@@ -8,44 +8,38 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* Menu fixe à gauche */
-.fixed-nav-left {
+.fixed-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 200px; /* Largeur du menu */
     height: 100vh; /* Hauteur totale de la page */
-    background: #0056b3; /* Fond bleu */
     padding: 20px;
+    border-right: 1px solid #ddd; /* Fine ligne verticale */
+    background-color: #fff; /* Fond blanc */
     z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
 }
 
-.fixed-nav-left ul {
+.fixed-menu ul {
     list-style: none;
 }
 
-.fixed-nav-left ul li {
+.fixed-menu ul li {
     margin-bottom: 15px;
 }
 
-.fixed-nav-left ul li a {
-    color: #fff;
+.fixed-menu ul li a {
+    color: #333;
     text-decoration: none;
     font-weight: bold;
 }
 
-.fixed-nav-left ul li a:hover {
+.fixed-menu ul li a:hover {
     text-decoration: underline;
 }
 
@@ -55,34 +49,25 @@ body {
     padding: 20px;
 }
 
-/* Header */
-header {
-    background: #0056b3;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.header-title {
-    margin-bottom: 10px;
-}
-
-/* Section Projets */
-.project {
+/* Sections */
+.container {
     margin-bottom: 40px;
 }
 
-.project h3 {
-    color: #0056b3;
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #444;
+}
+
+.container p {
+    margin-bottom: 15px;
+}
+
+.container ul {
+    margin-left: 20px;
+}
+
+.container ul li {
     margin-bottom: 10px;
-}
-
-/* Section Contact */
-#contact a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
 }
