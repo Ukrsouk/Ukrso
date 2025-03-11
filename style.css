@@ -96,3 +96,37 @@ body {
 .container ul li {
     margin-bottom: 10px;
 }
+/* Section Skills */
+#skills {
+    margin-top: 40px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    display: inline-block;
+    width: calc(100% - 140px);
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #4caf50;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 10px;
+}
