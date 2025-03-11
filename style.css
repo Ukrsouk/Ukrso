@@ -187,3 +187,41 @@ body {
     margin-bottom: 10px;
     border-radius: 10px;
 }
+/* Section Parcours */
+#parcours {
+    margin-top: 40px;
+}
+
+.parcours-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.parcours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.parcours-annee {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+.parcours-ecole {
+    flex: 2;
+    text-align: center;
+    color: #333;
+}
+
+.parcours-diplome {
+    flex: 1;
+    text-align: right;
+    font-style: italic;
+    color: #666;
+}
